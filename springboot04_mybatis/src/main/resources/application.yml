@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://43.139.17.97:3306/jdbc_test?useSSL=false&serverTimezone=UTC
+    username: jdbc_test
+    password: Txx75xtMBT4ZTawe

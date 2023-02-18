@@ -1,0 +1,13 @@
+server:
+  port: 82
+
+
+
+countery: china
+basedir: c:\windows\
+tempdir: ${basedir}temp
+
+datasource:
+  password: 123
+  user: hali
+  driver:  org.mariadb.jdbc.Driver

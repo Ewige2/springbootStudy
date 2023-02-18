@@ -9,19 +9,24 @@ package com.itheima.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-@Controller
+// @Controller
+// @ResponseBody
+@RestController  //    包含了这两个 @Controller @ResponseBody
+@RequestMapping("/users")
 public class UserController {
 
-    @RequestMapping(value = "/users", method = RequestMethod.POST)
-    @ResponseBody
+    // @RequestMapping(value = "/users", method = RequestMethod.POST)
+    // @ResponseBody
+    @PostMapping  // 简化写法
     public  String  save(){
         System.out.println("user save。。。。");
         return  "{'moudle':'save'}";
 
     }
 
-    @RequestMapping(value = "/users/{id}",  method = RequestMethod.DELETE)
-    @ResponseBody
+    // @RequestMapping(value = "/users/{id}",  method = RequestMethod.DELETE)
+    // @ResponseBody
+    @DeleteMapping("/{id}")
     public   String  delete(@PathVariable  Integer id) {  // PathVariable  表示从路径获取参数
         System.out.println("user delete...."+id);
         return  "{'moudle':'delete'}";
